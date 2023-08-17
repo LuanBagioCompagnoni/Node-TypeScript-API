@@ -1,0 +1,40 @@
+{
+    "compilerOptions": { 
+      "target": "es2019",
+      "moduleResolution": "node", //ambiente node.js
+      "module": "commonjs",
+      "lib": ["es2019"],
+      "sourceMap": true, //auxilia ao debugar, pois mostra no codigo de forma tipada
+      "outDir": "dist",
+      "strict": true,
+      "noImplicitAny": true, 
+      "strictNullChecks": true, //não permite declarar variáveis como null ou undefined
+      "strictFunctionTypes": true,
+      "noImplicitThis": true,
+      "resolveJsonModule": true,
+      "alwaysStrict": true,
+      "removeComments": true,
+      "noImplicitReturns": true,
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      "baseUrl": "./", //mapeia o root do projeto
+      "paths": { //diminui os imports (os caminhos)
+        "@src/*": ["./src/*"], 
+        "@test/*": ["./test/*"]
+      },
+      "rootDirs": [
+        "./src",
+        "./test"
+      ],
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true
+    },
+    "include": [
+      "./src/**/*.ts",
+      "./test/**/*.ts"
+    ],
+    "exclude": [
+      "./node_modules/*",
+      "dist"
+    ]
+  }
