@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "start": "npm run build && node dist/src/index.js",
+    "start": "yarn build && node dist/src/index.js",
+    "lint": "eslint ./src ./test --ext .ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -18,6 +19,9 @@
   "devDependencies": {
     "@types/module-alias": "^2.0.2",
     "@types/node": "^20.5.0",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@typescript-eslint/parser": "^6.4.0",
+    "eslint": "^8.47.0",
     "typescript": "^5.1.6"
   },
   "dependencies": {
