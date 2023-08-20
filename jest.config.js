@@ -1,4 +1,4 @@
-const { resolve } = require('path');
+const { resolve } = createRequire('path');
 const root = resolve(__dirname);
 module.exports = {
   rootDir: root,
